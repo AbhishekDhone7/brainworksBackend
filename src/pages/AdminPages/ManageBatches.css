@@ -1,0 +1,100 @@
+.manage-batches-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.add-batch-btn {
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-batch-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Batch Form */
+.batch-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0 30px;
+}
+
+.batch-form input,
+.batch-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.batch-form textarea {
+  resize: vertical;
+  grid-column: 1 / -1;
+}
+
+.batch-form button[type="submit"] {
+  grid-column: 1 / -1;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.batch-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Active Batches */
+.manage-batches-container h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+section {
+    width: 100%;
+  }
+  
+  section .form_data {
+    max-width: 40%;
+    margin: 25px auto;
+    padding: 35px 10px;
+    box-shadow: 0 0 15px -2px #475874;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form_heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form_data h1 {
+    font-size: 34px;
+    color: #2a4365;
+  }
+  
+  .form_data p {
+    color: #718096;
+    font-size: 15px;
+    margin-top: 9px;
+  }
+  
+  .form_data form {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .form_input {
+    padding: 5px;
+  }
+
+   input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d4d0d0;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 14px;
+    margin-top: 9px;
+    font-size: 14px;
+  }
+  
+  .form_data form .form_input label {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  
+   .two {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .form_data form .form_input input:focus {
+    border: 2px solid rgba(66, 153, 225, 0.6);
+  }
+  
+  .form_data form .form_input input::placeholder {
+    color: #8694a8;
+    letter-spacing: .5px;
+    font-size: 14px;
+  }
+  
+  .form_input .showpass {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    padding: 7px 10px;
+    margin-right: 5px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2a4365;
+    background-color: #EDF2F7;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form .btn {
+    display: block;
+    width: 150px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #1a365d;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  form .btn:hover {
+    background-color: #97a1b1;
+  }
+  
+  .form_data form p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .form_data form a {
+    text-decoration: none;
+    color: #718096;
+    border-bottom: 2px solid #8694a8;
+  }
+  
+  /* Media Queries */
+  
+  /* Medium screens */
+  @media (max-width: 992px) {
+    .form_data {
+      padding: 30px 10px;
+    }
+  
+    .form_data h1 {
+      font-size: 30px; /* Adjusts the font size */
+    }
+  
+    .form_data form {
+      padding: 10px 40px; /* Adjusts padding */
+    }
+  }
+  
+  /* Small screens */
+  @media (max-width: 768px) {
+    .form_data {
+      padding: 25px 10px;
+    }
+  
+    .form_data h1 {
+      font-size: 26px; /* Further adjusts the font size */
+    }
+  
+    .form_data form {
+      padding: 10px 30px; /* Further adjusts padding */
+    }
+  
+    .form_data form .form_input label {
+      font-size: 14px; /* Adjusts label font size */
+    }
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 576px) {
+    .form_data {
+      padding: 20px 10px;
+    }
+  
+    .form_data h1 {
+      font-size: 22px; /* Further adjusts the font size */
+    }
+  
+    .form_data form {
+      padding: 10px 20px; /* Further adjusts padding */
+    }
+  
+    .form_data form .form_input input {
+      font-size: 13px; /* Adjusts input font size */
+    }
+  
+    .form_input .showpass {
+      font-size: 12px; /* Adjusts show password button font size */
+      padding: 5px 8px; /* Adjusts show password button padding */
+    }
+  
+    form .btn {
+      font-size: 16px; /* Adjusts button font size */
+    }
+  }
+  

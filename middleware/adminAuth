@@ -1,0 +1,26 @@
+// middleware/adminAuth.js
+const jwt = require("jsonwebtoken");
+const admindb = require("../module/adminSchema");
+const keySecret = process.env.JWT_SECRET;
+
+const authenticateAdmin = async (req, res, next) => {
+  try {
+    const token = req.cookies.admincookie;
+    if (!token) return res.status(401).json({ message: "No token found" });
+
+    const verified = jwt.verify(token, keySecret);
+    const admin = await admindb.findOne({ _id: verified._id, "tokens.token": token });
+
+    if (!admin) return res.status(401).json({ message: "Admin not found" });
+
+    req.token = token;
+    req.rootUser = admin;
+    req.userId = admin._id;
+    next();
+  } catch (err) {
+    console.error("Admin Auth Error:", err);
+    res.status(401).json({ message: "Unauthorized - Invalid token" });
+  }
+};
+
+module.exports = authenticateAdmin;
